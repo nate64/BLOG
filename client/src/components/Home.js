@@ -40,7 +40,7 @@ class Home extends Component {
                   <List.Item>14 October:  TIRL (Today I Re-Learned) that you can use arrow functions to auto-bind.</List.Item>
                   <List.Item>14 October:  Playing with 'grid' - a semantic react component.  Needs more tweaking to look good.</List.Item>
                   <List.Item>--> Looks better now.  HINT: follow the docs to get the results you want</List.Item>
-                  <List.item>17 October: Deployed to Heroku at: https://wunder-awesome-react-journey.herokuapp.com/</List.item>
+                  <List.Item>17 October: Deployed to Heroku at: https://wunder-awesome-react-journey.herokuapp.com/</List.Item>
                   <List.Item>This required fixing the package.json file and fixing a devise error in /config/intitializers/devise.rb</List.Item>
                 </List>
               </Segment>
