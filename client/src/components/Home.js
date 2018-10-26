@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Segment, List, Grid, Container, Image } from 'semantic-ui-react';
-
+import { Header, Segment, List, Grid, Image } from 'semantic-ui-react';
+import { Container } from '../styles/shared'
 
 class Home extends Component {
   render() {
