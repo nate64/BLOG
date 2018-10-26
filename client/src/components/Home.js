@@ -5,7 +5,9 @@ import { Container } from '../styles/shared'
 class Home extends Component {
   render() {
     return (
-      <div>
+      
+        <Container>
+
         <Container fluid>
           <Image src='/images/front_page.jpg' fluid size='large' alt='nature'/>
           <Header as='h1' textAlign='center'>Nate's Journey</Header>
@@ -28,6 +30,7 @@ class Home extends Component {
                   <List.Item>Remove Register Functionality</List.Item>
                   <List.Item>Remove Login Functionality</List.Item>
                   <List.Item>Host on Heroku with cool URL</List.Item>
+                  <List.Item>Wire frame this app</List.Item>
                 </List>
               </Segment>
             </Grid.Column>
@@ -42,12 +45,15 @@ class Home extends Component {
                   <List.Item>--> Looks better now.  HINT: follow the docs to get the results you want</List.Item>
                   <List.Item>17 October: Deployed to Heroku at: https://wunder-awesome-react-journey.herokuapp.com/</List.Item>
                   <List.Item>This required fixing the package.json file and fixing a devise error in /config/intitializers/devise.rb</List.Item>
+                  <List.Item>25 October: Setup framework for app wide styled components /styles/shared.js</List.Item>
                 </List>
               </Segment>
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
+        
+        </Container>
+    
 
     );
   }
