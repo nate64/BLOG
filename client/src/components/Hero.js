@@ -4,10 +4,7 @@ import styled from 'styled-components';
 class Hero extends React.Component {
   render() {
     return (
-      <StyledImage
-        src={this.props.imgSrc}
-        alt={this.props.imgSrc}
-      >
+      <StyledImage src={this.props.imgSrc} alt={this.props.imgSrc} >
         <StyledText>{this.props.text}</StyledText>
       </StyledImage>
     );
