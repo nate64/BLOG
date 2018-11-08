@@ -3,14 +3,16 @@ import { Header, Segment, List, Grid, Image } from 'semantic-ui-react';
 import { Container } from '../styles/shared'
 import front_page from '../images/front_page.jpg';
 import Hero from './Hero';
-import StyledText from './Hero'
+import styled from 'styled-components';
 
+import StyledText from './Hero'
 import StyledImage from '../styles/shared'
 
 class Home extends Component {
   render() {
     return (
-      <Container>
+      <PageContainer>
+
           <Hero imgSrc={front_page} text="Nate Estes" />
       <Container>
           <Header as='h1' textAlign='center'>My Journey Learning React</Header>
@@ -37,9 +39,13 @@ class Home extends Component {
         </Grid>
         
       
-      </Container>
+      </PageContainer>
     );
   }
 }
+
+const PageContainer = styled.div`
+  width: 100%;
+`
 
 export default Home;

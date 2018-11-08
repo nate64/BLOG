@@ -24,12 +24,12 @@ const StyledImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  // margin-top: 50px;
   margin-bottom: 50px;
 `
 const StyledText = styled.p`
-  font-family: 'Balthazar', serif;
-  font-size: 75px !important;
+  font-family: 'CopperPlate';
+  font-size: 150px !important;
   color: white;
 `
 

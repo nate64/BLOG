@@ -15,6 +15,7 @@ class Log extends Component {
             <List.Item>This required fixing the package.json file and fixing a devise error in /config/intitializers/devise.rb</List.Item>
             <List.Item>25 October: Setup framework for app wide styled components /styles/shared.js</List.Item>
             <List.Item>3 November: Added 'Todo' and 'Log' routes, moved content to those pages.</List.Item>
+            <List.Item>7 November: Adjusted hero image, still need a way to get 2 lines of text over image.</List.Item>
           </List>
       </Segment>
     )
