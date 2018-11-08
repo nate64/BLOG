@@ -2,24 +2,19 @@ import React, { Component } from 'react';
 import { Header, Segment, List, Grid, Image } from 'semantic-ui-react';
 import { Container } from '../styles/shared'
 import front_page from '../images/front_page.jpg';
-import StyledImage from '../styles/shared'
 import Hero from './Hero';
 import StyledText from './Hero'
+
+import StyledImage from '../styles/shared'
 
 class Home extends Component {
   render() {
     return (
       <Container>
-          
-          <Hero imgSrc={front_page}>
-            <StyledText textAlign='center'>Nate Estes</StyledText>
-          </Hero>
-
+          <Hero imgSrc={front_page} text="Nate Estes" />
       <Container>
-          <Header as='h1' textAlign='center'>Nate's Journey</Header>
-          <Header as='h2' textAlign='center'>Learning React</Header>
-          
-
+          <Header as='h1' textAlign='center'>My Journey Learning React</Header>
+            {/* would like to put this on a second line over main hero image */}
       </Container>
 
         <Segment>
