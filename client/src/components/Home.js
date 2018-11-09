@@ -24,11 +24,15 @@ class Home extends Component {
         
         </HeroContainer>
         
-        <Segment basic>
-          This is a segment.
-          My plan is to host this on Heroku and improve it a little each week.
-          As I improve it I will explain what I did and teach it to others.
-        </Segment>
+        <Intro>
+          Welcome to my website!  This page is designed to be a work in progress. 
+          I just completed DevPoint Labs’ Web Development Boot Camp and I want to expand and improve my skills. 
+          My goal is to keep my skills sharp by developing this website and posting the fundamentals of ReactJS to this Blog. 
+          I look forward to you learning with me!
+        </Intro>
+        <Intro>
+          --Nate
+        </Intro>
         
         </PageContainer>
 
@@ -65,6 +69,10 @@ text-align: center;
 font-family: 'CopperPlate';
 font-size: 100px;
 color: white;
+`
+
+const Intro = styled.h2`
+  text-align: center;
 `
 
 export default Home;
