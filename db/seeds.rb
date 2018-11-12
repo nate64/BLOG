@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+10.times do
+  Blog.create(
+    title: Faker::Book.title,
+    author: Faker::Book.author,
+    body: Faker::Lorem.paragraph,
+  )
+  end
+
+  puts "10 blog records seeded"
