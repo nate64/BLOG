@@ -6,7 +6,7 @@ class Blog extends React.Component {
   state = { getBlogs: [] }
 
   componentDidMount() {
-    axios.get('/pages')
+    axios.get('/blog')
     .then( res => this.setState({ getBlogs: res.data })
     )
   }

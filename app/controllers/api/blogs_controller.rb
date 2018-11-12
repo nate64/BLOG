@@ -1,4 +1,4 @@
-class BlogsController < ApplicationController
+class Api::BlogsController < ApplicationController
   skip_before_action :authenticate_user!,only: [:index, :show]
   before_action :set_review, only: [:show, :update, :destroy]
 
@@ -6,9 +6,11 @@ class BlogsController < ApplicationController
   def index
     render json: Blog.all 
   end
-
+  
   def show
-    render json @blog
+  end
+
+  def new
   end
 
   def create
@@ -28,6 +30,5 @@ class BlogsController < ApplicationController
   def blog_params
     params.require(:blog).permit(:title, :author, :body)
   end
-
 
 end
