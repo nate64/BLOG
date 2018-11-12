@@ -1,21 +1,24 @@
-import axios from 'axios'
 
-const BLOGS = 'BLOGS';
+//redux uses reducers
 
-export const getBlogs = () => {
-  return(dispatch) => {
-    axios.get('/pages')
-    .then( res => {
-      dispatch({ type: BLOGS, blogs: res.data })
-    })
-  }
-}
+// import axios from 'axios'
 
-export default ( state = [], action ) => {
-  switch (action.type) {
-    case BLOGS:
-      return action.blogs
-    default:
-      return state
-  }
-}
+// const BLOGS = 'BLOGS';
+
+// export const getBlogs = () => {
+//   return(dispatch) => {
+//     axios.get('/pages')
+//     .then( res => {
+//       dispatch({ type: BLOGS, blogs: res.data })
+//     })
+//   }
+// }
+
+// export default ( state = [], action ) => {
+//   switch (action.type) {
+//     case BLOGS:
+//       return action.blogs
+//     default:
+//       return state
+//   }
+// }

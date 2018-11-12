@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { Header, Segment, List, Image } from 'semantic-ui-react';
+import React from 'react'
+import { Card, Container } from 'semantic-ui-react';
 import axios from 'axios';
-import { getBlogs } from '../reducers/blogs'
 
 class Blog extends React.Component {
   state = { getBlogs: [] }
@@ -12,16 +11,27 @@ class Blog extends React.Component {
     )
   }
 
-  displayBlogs() {
-
+  displayBlogs = () => {
+    return this.state.getBlogs.map( b => {
+      return (
+        <Card key={b.id}>
+          {b.title}
+          {b.author}
+          {b.body}
+        </Card>
+      )
+    })
   }
 
   render() {
     return (
-      <>
-        <h1>This is the Blog Page</h1>
-        
-      </>
+      <div>
+        <Container>
+          <Card.Group>
+            {this.displayBlogs()}
+          </Card.Group>
+        </Container>
+      </div>
     )
   }
 }
