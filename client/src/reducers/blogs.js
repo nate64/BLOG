@@ -4,11 +4,18 @@ const BLOGS = 'BLOGS';
 
 export const getBlogs = () => {
   return(dispatch) => {
-    axios.get(url here)
+    axios.get('/pages')
     .then( res => {
       dispatch({ type: BLOGS, blogs: res.data })
     })
   }
 }
 
-**add reducer Here....
+export default ( state = [], action ) => {
+  switch (action.type) {
+    case BLOGS:
+      return action.blogs
+    default:
+      return state
+  }
+}

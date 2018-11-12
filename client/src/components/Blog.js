@@ -3,19 +3,24 @@ import { Header, Segment, List, Image } from 'semantic-ui-react';
 import axios from 'axios';
 import { getBlogs } from '../reducers/blogs'
 
-class Blog extends Component {
-  state ?
+class Blog extends React.Component {
+  state = { getBlogs: [] }
 
   componentDidMount() {
-    const { dispatch } = this.props
-    dispatch(getBlogs())
+    axios.get('/pages')
+    .then( res => this.setState({ getBlogs: res.data })
+    )
+  }
+
+  displayBlogs() {
+
   }
 
   render() {
     return (
       <>
         <h1>This is the Blog Page</h1>
-        <h1>This is a test.</h1>
+        
       </>
     )
   }
