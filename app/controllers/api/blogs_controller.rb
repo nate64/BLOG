@@ -1,5 +1,5 @@
 class Api::BlogsController < ApplicationController
-  skip_before_action :authenticate_user!,only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_review, only: [:show, :update, :destroy]
 
   #get_blogs here?

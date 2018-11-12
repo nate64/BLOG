@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :pages
   mount_devise_token_auth_for 'User', at: 'api/auth'
+
   namespace :api do
+    resources :blogs
     #API ROUTES SHOULD GO HERE
   end
 
