@@ -1,8 +1,7 @@
 class Api::BlogsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_review, only: [:show, :update, :destroy]
+  before_action :set_blog, only: [:show, :update, :destroy]
 
-  #get_blogs here?
   def index
     render json: Blog.all 
   end
