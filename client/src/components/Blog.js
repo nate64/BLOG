@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Container } from 'semantic-ui-react';
+import { Card, Header, Container, Segment } from 'semantic-ui-react';
 import axios from 'axios';
 
 class Blog extends React.Component {
@@ -15,9 +15,15 @@ class Blog extends React.Component {
     return this.state.getBlogs.map( b => {
       return (
         <Card key={b.id}>
-          {b.title}
-          {b.author}
-          {b.body}
+          <Card.Header>
+            {b.title}
+          </Card.Header>
+          <Card.Meta>
+            {b.author}
+          </Card.Meta>
+          <Card.Content>
+            {b.body}
+          </Card.Content>
         </Card>
       )
     })
@@ -27,9 +33,11 @@ class Blog extends React.Component {
     return (
       <div>
         <Container>
-          <Card.Group>
-            {this.displayBlogs()}
-          </Card.Group>
+          <Segment basic>
+            <Card.Group itemsPerRow={1}>
+              {this.displayBlogs()}
+            </Card.Group>
+          </Segment>
         </Container>
       </div>
     )
