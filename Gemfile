@@ -30,11 +30,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'omniauth'
 gem 'devise_token_auth'
+gem 'faker'
 
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'faker'
 end
 
 group :development do
