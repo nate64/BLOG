@@ -20,13 +20,13 @@ class NavBar extends Component {
     }
     return (
       <Menu.Menu position='right'>
-        <Menu.Item name='This app built with create-repack-app by Dave Jungst' />
-        {/* <Link to='/register'>
+        <Link to='/register'>
           <Menu.Item name='Register' />
-        </Link> */}
-        {/* <Link to='/login'>
+        </Link> 
+        <Link to='/login'>
           <Menu.Item name='Login' />
-        </Link> */}
+        </Link>
+        <Menu.Item name='This app built with create-repack-app by Dave Jungst' />
       </Menu.Menu>
     );
   }

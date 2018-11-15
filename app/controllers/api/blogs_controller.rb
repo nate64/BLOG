@@ -1,18 +1,14 @@
 class Api::BlogsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :create]
   before_action :set_blog, only: [:show, :update, :destroy]
 
   def index
     render json: Blog.all 
   end
-  
-  def show
-  end
-
-  def new
-  end
 
   def create
+    blog = Blog.create
+    render json: blog
   end
 
   def update

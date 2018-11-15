@@ -31,8 +31,8 @@ class App extends Component {
             <Route exact path='/Blog/New' component={NewBlog} />
             <Route exact path='/Todo' component={Todo} />
             <Route component={NoMatch} />
-            {/* <AuthRoute exact path='/login' component={Login} /> */}
-            {/* <AuthRoute exact path='/register' component={Register} /> */}
+            <AuthRoute exact path='/login' component={Login} />
+            <AuthRoute exact path='/register' component={Register} />
           </Switch>
         </FetchUser>
       </div>
