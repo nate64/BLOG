@@ -9,6 +9,7 @@ import About from './About'
 import FetchUser from './FetchUser';
 import Todo from './Todo'
 import Blog from './Blog'
+import NewBlog from './NewBlog'
 
 import Login from './Login';
 import Register from './Register';
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact path='/About' component={About} />
             <Route exact path='/Log' component={Log} />
             <Route exact path='/Blog' component={Blog} />
+            <Route exact path='/Blog/New' component={NewBlog} />
             <Route exact path='/Todo' component={Todo} />
             <Route component={NoMatch} />
             {/* <AuthRoute exact path='/login' component={Login} /> */}

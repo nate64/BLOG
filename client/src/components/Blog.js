@@ -1,6 +1,8 @@
 import React from 'react'
-import { Card, Header, Container, Segment } from 'semantic-ui-react';
 import axios from 'axios';
+import { Card, Container, Segment, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+
 
 class Blog extends React.Component {
   state = { getBlogs: [] }
@@ -33,6 +35,11 @@ class Blog extends React.Component {
     return (
       <div>
         <Container>
+          <Link to="/blog/new" >
+            <Button>
+              Write a New Blog Entry  
+            </Button>
+          </Link>
           <Segment basic>
             <Card.Group itemsPerRow={1}>
               {this.displayBlogs()}
