@@ -1,5 +1,4 @@
-import { Container, Form, Label } from 'semantic-ui-react'
-
+import { Container, Form, Label, Button, Input } from 'semantic-ui-react'
 import React from 'react'
 import axios from 'axios'
 
@@ -12,36 +11,43 @@ handleSubmit = e => {
   axios.post('/api/blogs', { title, author, body })
     .then ( ({ data }) => {
       this.setState({ blogs: [data, ...blogs], title: '', author: '', body: '' })
-    }
-    )
+    })
 }
 
+handleChange = (e) => this.setState({ [e.target.name]: e.target.value })
+
+addBlog = e => {
+  return null
+}
 
 render() {
+  const { title, author, body } = this.state
   return (
     <Container>
-
-      <Form.Field>
-        <Label>Title</Label>
-        <Form.Input
+      <Form onSubmit={this.handleSubmit}>
+        <Input
           required
-          />
-      </Form.Field>
-      
-      <Form.Field>
-        <Label>Author</Label>
-        <Form.Input
+          name='title'
+          placeholder='Blog Entry Title'
+          value={title}
+          onChange={this.handleChange}
+        />
+        <Input
           required
-          />
-      </Form.Field>
-
-      <Form.Field>
-        <Label>Blog Entry</Label>
-        <Form.TextArea
+          name='author'
+          placeholder="Author's Name"
+          value={author}
+          onChange={this.handleChange}
+        />
+        <Input 
           required
-          />
-      </Form.Field>
-      
+          name='body'
+          placeholder='Write Something Inspiring...'
+          value={body}
+          onChange={this.handleChange}
+        />
+      </Form>
+      <button onClick={this.handleSubmit}>Submit</button>
     </Container>
   )
 }
