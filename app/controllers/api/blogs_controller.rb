@@ -6,6 +6,9 @@ class Api::BlogsController < ApplicationController
     render json: Blog.all 
   end
 
+  def show
+  end
+
   def create
     blog = Blog.create
     render json: blog
