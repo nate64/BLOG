@@ -11,6 +11,7 @@ handleSubmit = e => {
   axios.post('/api/blogs', { title, author, body })
     .then ( ({ data }) => {
       this.setState({ blogs: [data, ...blogs], title: '', author: '', body: '' })
+      //.this.state.history.push('/Blog') //this no worky
     })
 }
 

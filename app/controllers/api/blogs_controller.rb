@@ -4,14 +4,15 @@ class Api::BlogsController < ApplicationController
 
   def index
     render json: Blog.all 
+    #render json: Blog.get_blogs
   end
 
   def show
+    render json @review
   end
 
   def create
     blog = Blog.create(blog_params)
-    # @movie = Movie.new(movie_params)
     render json: blog
   end
 

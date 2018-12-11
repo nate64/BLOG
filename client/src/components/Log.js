@@ -17,6 +17,7 @@ class Log extends Component {
             <List.Item>3 November: Added 'Todo' and 'Log' routes, moved content to those pages.</List.Item>
             <List.Item>7 November: Adjusted hero image, still need a way to get 2 lines of text over image.</List.Item>
             <List.Item>11 November: created branch 'blog' to work on displaying bloge entries and creating new blogs.</List.Item>
+            <List.Item>10 December: Finally was able to get time to address data saving in DB as nil.</List.Item>
           </List>
       </Segment>
     )
