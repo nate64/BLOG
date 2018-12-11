@@ -10,7 +10,8 @@ class Api::BlogsController < ApplicationController
   end
 
   def create
-    blog = Blog.create
+    blog = Blog.create(blog_params)
+    # @movie = Movie.new(movie_params)
     render json: blog
   end
 
